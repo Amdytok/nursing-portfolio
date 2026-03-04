@@ -53,13 +53,13 @@
 <body>
   <nav>
     <div class="nav-container">
-      <button class="tab-btn active" onclick="showPage('home')">HOME</button>
-      <button class="tab-btn" onclick="showPage('about')">PHILOSOPHY</button>
-      <button class="tab-btn" onclick="showPage('experience')">CLINICAL</button>
-      <button class="tab-btn" onclick="showPage('vault')">CREDENTIALS</button>
-      <button class="tab-btn" onclick="showPage('competencies')">COMPETENCIES</button>
-      <button class="tab-btn" onclick="showPage('development')">DEVELOPMENT</button>
-      <button class="tab-btn" onclick="showPage('references')">REFERENCES</button>
+      <button class="tab-btn active" onclick="showPage(event, 'home')">HOME</button>
+      <button class="tab-btn" onclick="showPage(event, 'about')">PHILOSOPHY</button>
+      <button class="tab-btn" onclick="showPage(event, 'experience')">CLINICAL</button>
+      <button class="tab-btn" onclick="showPage(event, 'vault')">CREDENTIALS</button>
+      <button class="tab-btn" onclick="showPage(event, 'competencies')">COMPETENCIES</button>
+      <button class="tab-btn" onclick="showPage(event, 'development')">DEVELOPMENT</button>
+      <button class="tab-btn" onclick="showPage(event, 'references')">REFERENCES</button>
     </div>
   </nav>
 
@@ -72,8 +72,11 @@
       <div style="margin-top:25px;">
         <span style="background:rgba(255,255,255,0.15); padding:8px 20px; border-radius:50px; font-size:0.8rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.3);">BILINGUAL (ENGLISH/SPANISH)</span>
       </div>
-      <a href="mailto:[INSERT EMAIL HERE]" class="btn-contact"><i class="fas fa-paper-plane"></i> Contact for Interview</a>
-      <a href="https://www.linkedin.com/in/andy-diaz-gomez-4375a0291" target="_blank" class="btn-contact" style="background:#0077B5; margin-left:10px;">
+
+      <!-- UPDATED EMAIL HERE -->
+      <a href="mailto:workand999@gmail.com" class="btn-contact"><i class="fas fa-paper-plane"></i> Contact for Interview</a>
+
+      <a href="https://www.linkedin.com/in/andy-diaz-gomez-4375a0291" target="_blank" rel="noopener noreferrer" class="btn-contact" style="background:#0077B5; margin-left:10px;">
         <i class="fab fa-linkedin"></i> LinkedIn
       </a>
     </div>
@@ -103,7 +106,7 @@
       <div>
         <p>My core beliefs are <span class="highlight">respect, equity, integrity, and service</span>. Respect is about being attentive and tailoring care to a patient's culture and language. Equity involves recognizing barriers—such as cost, stigma, or low health literacy—and finding sustainable solutions. Integrity is about recognizing boundaries and being truthful. I want to be the nurse who detects changes early, communicates effectively, and doesn't hesitate to raise the alarm when necessary.</p>
       </div>
-      <a href="Personal_Philosophy_of_Nursing_APA7.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> View Original APA Research Paper</a>
+      <a href="Personal_Philosophy_of_Nursing_APA7.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> View Original APA Research Paper</a>
     </div>
   </div>
 
@@ -148,10 +151,10 @@
     <div class="card">
       <p style="margin-bottom: 20px; font-weight: 500;">Select a credential to view or download.</p>
 
-      <a href="Resume-Andy-Diaz-Gomez.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Professional Resume</a>
-      <a href="Certificate-BLS-Andy-Diaz-Gomez.pdf" target="_blank" class="doc-link"><i class="fas fa-certificate"></i> BLS Provider Certification (AHA)</a>
-      <a href="Certificate-CBCS-Andy-Diaz-Gomez.pdf" target="_blank" class="doc-link"><i class="fas fa-file-medical"></i> Billing &amp; Coding Specialist (CBCS)</a>
-      <a href="Nursing_Portfolio_cover_letter.pdf" target="_blank" class="doc-link"><i class="fas fa-envelope-open-text"></i> Professional Cover Letter</a>
+      <a href="Resume-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> Professional Resume</a>
+      <a href="Certificate-BLS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-certificate"></i> BLS Provider Certification (AHA)</a>
+      <a href="Certificate-CBCS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-medical"></i> Billing &amp; Coding Specialist (CBCS)</a>
+      <a href="Nursing_Portfolio_cover_letter.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-envelope-open-text"></i> Professional Cover Letter</a>
     </div>
 
     <div class="card">
@@ -171,29 +174,21 @@
 
     <div class="card">
       <h3>Nursing Skills Checklist</h3>
-      <a href="Nursing_Skills_Checklist.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Nursing Skills Checklist</a>
+      <a href="Nursing_Skills_Checklist.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> Nursing Skills Checklist</a>
       <p>(Coming soon)</p>
     </div>
 
     <div class="card">
       <h3>Lab Competency Evaluations</h3>
-      <a href="Lab_Competency_Health_Assessment.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Health Assessment</a> <span>(Coming soon)</span>
-      <a href="Lab_Competency_Pediatrics.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Pediatrics</a> <span>(Coming soon)</span>
-      <a href="Lab_Competency_Maternal_Newborn.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Maternal-Newborn</a> <span>(Coming soon)</span>
-      <a href="Lab_Competency_Pharmacology.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Pharmacology</a> <span>(Coming soon)</span>
+      <a href="Lab_Competency_Health_Assessment.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> Health Assessment</a> <span>(Coming soon)</span>
+      <a href="Lab_Competency_Pediatrics.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> Pediatrics</a> <span>(Coming soon)</span>
+      <a href="Lab_Competency_Maternal_Newborn.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> Maternal-Newborn</a> <span>(Coming soon)</span>
+      <a href="Lab_Competency_Pharmacology.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> Pharmacology</a> <span>(Coming soon)</span>
     </div>
 
-    <!-- Moved from Reflections tab -->
     <div class="card">
       <h3>Service-Learning Reflection</h3>
-      <a href="Service_Learning_Reflection.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Service-Learning Reflection</a>
-      <p>(Coming soon)</p>
-    </div>
-
-    <!-- Moved from Reflections tab -->
-    <div class="card">
-      <h3>Clinical Exemplar (Recommended)</h3>
-      <a href="Clinical_Exemplar.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Clinical Exemplar</a>
+      <a href="Service_Learning_Reflection.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> Service-Learning Reflection</a>
       <p>(Coming soon)</p>
     </div>
   </div>
@@ -215,9 +210,9 @@
 
     <div class="card">
       <h3>Letters of Reference</h3>
-      <a href="Letter_of_Reference_1.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Letter of Reference 1</a>
+      <a href="Letter_of_Reference_1.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> Letter of Reference 1</a>
       <p>(Coming soon)</p>
-      <a href="Letter_of_Reference_2.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Letter of Reference 2</a>
+      <a href="Letter_of_Reference_2.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"><i class="fas fa-file-pdf"></i> Letter of Reference 2</a>
       <p>(Coming soon)</p>
     </div>
   </div>
@@ -228,16 +223,15 @@
   </footer>
 
   <script>
-    function showPage(pageId) {
+    function showPage(e, pageId) {
       document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
 
       const page = document.getElementById(pageId);
       if (page) page.classList.add('active');
 
-      // safer than assuming `event` always exists
-      if (window.event && window.event.currentTarget && window.event.currentTarget.classList) {
-        window.event.currentTarget.classList.add('active');
+      if (e && e.currentTarget && e.currentTarget.classList) {
+        e.currentTarget.classList.add('active');
       }
 
       window.scrollTo(0, 0);
