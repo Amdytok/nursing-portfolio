@@ -4,43 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy Diaz Gomez | RN Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --primary: #004a99; --secondary: #00a8e8; --bg: #f4f7f9; --white: #ffffff; --text: #2d3436; }
+        :root { --primary: #004a99; --secondary: #00a8e8; --bg: #f0f4f8; --white: #ffffff; --text: #2d3436; --accent: #00d2ff; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
 
-        /* Navigation Tab Bar */
-        nav { position: sticky; top: 0; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; }
-        .nav-container { max-width: 1100px; margin: auto; display: flex; justify-content: center; gap: 10px; padding: 10px; flex-wrap: wrap; }
+        nav { position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 15px rgba(0,0,0,0.08); z-index: 1000; }
+        .nav-container { max-width: 1100px; margin: auto; display: flex; justify-content: center; gap: 5px; padding: 10px; }
         .tab-btn { 
-            padding: 12px 20px; border: none; background: none; font-weight: 600; cursor: pointer; color: var(--text);
-            border-bottom: 3px solid transparent; transition: 0.3s; font-size: 0.9rem;
+            padding: 12px 25px; border: none; background: none; font-weight: 600; cursor: pointer; color: #636e72;
+            border-bottom: 3px solid transparent; transition: 0.3s; font-size: 0.85rem; letter-spacing: 0.5px;
         }
         .tab-btn.active { color: var(--primary); border-bottom: 3px solid var(--primary); }
-        .tab-btn:hover { background: #f0f2f5; border-radius: 5px; }
+        .tab-btn:hover { color: var(--primary); background: rgba(0,74,153,0.05); border-radius: 8px 8px 0 0; }
 
-        /* Content Sections */
-        .page { display: none; padding: 40px 20px; max-width: 1000px; margin: auto; animation: fadeIn 0.4s ease; }
+        .page { display: none; padding: 40px 20px; max-width: 1000px; margin: auto; animation: slideUp 0.4s ease-out; }
         .page.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Cards & Styling */
-        .card { background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 25px; }
-        .hero { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border-radius: 20px; margin-bottom: 40px; }
-        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid white; object-fit: cover; margin-bottom: 15px; }
+        .card { background: var(--white); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); margin-bottom: 30px; border: 1px solid rgba(0,0,0,0.02); }
+        .hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #003366 0%, #004a99 100%); color: white; border-radius: 24px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,74,153,0.2); }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 6px solid rgba(255,255,255,0.2); object-fit: cover; margin-bottom: 20px; }
         
-        /* PDF Viewer */
-        .pdf-container { width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 10px; margin-top: 15px; }
-        .doc-link { display: flex; align-items: center; gap: 10px; padding: 15px; background: #eef2f7; border-radius: 10px; text-decoration: none; color: var(--primary); font-weight: 600; margin-bottom: 10px; transition: 0.3s; }
-        .doc-link:hover { background: var(--primary); color: white; }
+        .pdf-container { width: 100%; height: 700px; border: none; border-radius: 12px; background: #eee; }
+        .doc-link { display: flex; align-items: center; gap: 12px; padding: 18px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; color: var(--primary); font-weight: 600; margin-bottom: 12px; transition: 0.2s; }
+        .doc-link:hover { transform: translateX(5px); border-color: var(--secondary); background: #f0f9ff; }
 
-        h2 { color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .skill-item { background: #eef2f7; padding: 10px 15px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; }
+        h2 { color: var(--primary); margin-bottom: 25px; font-weight: 700; font-size: 1.8rem; display: flex; align-items: center; gap: 12px; }
+        h3 { color: var(--text); margin-bottom: 10px; font-size: 1.2rem; }
+        
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+        .skill-item { background: #f1f5f9; padding: 12px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; color: #475569; border-left: 4px solid var(--secondary); }
 
-        footer { text-align: center; padding: 40px; color: #636e72; font-size: 0.8rem; }
+        .philosophy-text p { margin-bottom: 20px; font-size: 1.05rem; color: #444; line-height: 1.8; text-align: justify; }
+        .highlight { color: var(--primary); font-weight: 600; }
+
+        .btn-contact { background: var(--secondary); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px; transition: 0.3s; }
+        .btn-contact:hover { background: var(--primary); transform: scale(1.05); }
+
+        footer { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 0.85rem; }
     </style>
 </head>
 <body>
@@ -57,16 +61,17 @@
     <!-- HOME PAGE -->
     <div id="home" class="page active">
         <div class="hero">
-            <img src="profile.jpg" alt="Andy Diaz Gomez" class="profile-img" onerror="this.src='https://via.placeholder.com/150?text=ADG'">
+            <img src="profile.jpg" alt="Andy Diaz Gomez" class="profile-img" onerror="this.src='https://via.placeholder.com/160?text=ADG'">
             <h1>Andy Diaz Gomez</h1>
-            <p>New Graduate RN Candidate | Miami, FL</p>
-            <div style="margin-top:20px;">
-                <span style="background:rgba(255,255,255,0.2); padding:5px 15px; border-radius:20px; font-size:0.8rem;">BILINGUAL (EN/ES)</span>
+            <p style="font-size: 1.2rem; font-weight: 300; letter-spacing: 1px; margin-top: 10px;">New Graduate RN Candidate | Miami, FL</p>
+            <div style="margin-top:25px;">
+                <span style="background:rgba(255,255,255,0.15); padding:8px 20px; border-radius:50px; font-size:0.8rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.3);">BILINGUAL (ENGLISH/SPANISH)</span>
             </div>
+            <a href="mailto:[INSERT EMAIL HERE]" class="btn-contact"><i class="fas fa-paper-plane"></i> CONTACT FOR INTERVIEW</a>
         </div>
         <div class="card">
-            <h2><i class="fas fa-user-nurse"></i> Professional Summary</h2>
-            <p>Dedicated RN Candidate (NCLEX Target: May-June 2026) with clinical training at Select Medical and Evolutions Treatment Center. Focused on early intervention through vigilant patient contact and shared decision-making.</p>
+            <h2><i class="fas fa-user-nurse"></i> Professional Mission</h2>
+            <p>Dedicated Registered Nurse Candidate with a focus on <strong>early intervention</strong> and <strong>continuity of care</strong>. By combining clinical vigilance with compassionate, bilingual patient education, I aim to prevent emergencies and support health equity in high-acuity environments.</p>
         </div>
     </div>
 
@@ -74,82 +79,86 @@
     <div id="about" class="page">
         <div class="card">
             <h2><i class="fas fa-book-medical"></i> Nursing Philosophy</h2>
-            <p style="font-style: italic; color: #555; margin-bottom: 20px;">"Continuity of care is the key to early intervention and emergency prevention."</p>
-            <div style="line-height: 1.8; color: #333;">
-                <p><strong>Nursing, in my opinion, is professional care that uses evidence, clinical judgment, and compassion to uphold human dignity and to assist people in healing, adapting, or living well with their illness.  Being a bilingual student of nursing, I have witnessed that the results are significantly better when patients understand the plan and feel comfortable to ask questions. Nurses often know patients best because they spend sustained time with them during daily shifts. Much of nursing involves continuous observation, analysis, and timely intervention when a patient’s condition changes. The National Academies report notes that nurses frequently serve as the first point of access to care, especially in community settings, which makes early assessment and timely escalation a core responsibility (National Academies of Sciences, Engineering, and Medicine, 2021). I want to be the nurse who detects changes in the patient's condition early, who communicates effectively, and who doesn't hesitate to raise the alarm when necessary.</strong></p>
-                <p><strong> My core beliefs are respect, equity, integrity, and service. Respect is about being attentive and tailoring the care to a patient's culture, language, and readiness.  Equity involves recognizing the barriers that can make it difficult for people to get care, such as the cost, fear, stigma, or low health literacy, and it is about assisting patients in finding solutions that are not only feasible but also sustainable after discharge.  Integrity is about recognizing the boundaries of my practice, adhering to the guidelines, and being truthful in my communication with patients and colleagues. Service is being reliable and continually making the patients benefit the main consideration rather than the easiest way of doing things.  I believe that education is the key to autonomy, therefore I focus on instructing and relationship-building as an inherent part of care.  As a rights-based profession, nursing also includes culturally safe, people-centered care and advocacy for equitable access to health and health care (White et al., 2025).</strong></p>
+            <div class="philosophy-text">
+                <p>Nursing, in my opinion, is professional care that uses <span class="highlight">evidence, clinical judgment, and compassion</span> to uphold human dignity and to assist people in healing, adapting, or living well with their illness. Being a bilingual student of nursing, I have witnessed that the results are significantly better when patients understand the plan and feel comfortable to ask questions.</p>
+                
+                <p>Nurses often know patients best because they spend sustained time with them during daily shifts. Much of nursing involves <span class="highlight">continuous observation, analysis, and timely intervention</span> when a patient’s condition changes. The National Academies report notes that nurses frequently serve as the first point of access to care, especially in community settings, which makes early assessment and timely escalation a core responsibility.</p>
+                
+                <p>My core beliefs are <span class="highlight">respect, equity, integrity, and service</span>. Respect is about being attentive and tailoring care to a patient's culture and language. Equity involves recognizing barriers—such as cost, stigma, or low health literacy—and finding sustainable solutions. Integrity is about recognizing boundaries and being truthful. I want to be the nurse who detects changes early, communicates effectively, and doesn't hesitate to raise the alarm when necessary.</p>
             </div>
-            <a href="Personal_Philosophy_of_Nursing_APA7.pdf" target="_blank" class="doc-link" style="margin-top:20px;"><i class="fas fa-file-pdf"></i> View Original APA Paper</a>
+            <a href="Personal_Philosophy_of_Nursing_APA7.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> View Original APA Research Paper</a>
         </div>
     </div>
 
     <!-- CLINICAL PAGE -->
     <div id="experience" class="page">
-        <h2><i class="fas fa-stethoscope"></i> Clinical Rotations</h2>
+        <h2><i class="fas fa-stethoscope"></i> Clinical Background</h2>
         <div class="card">
-            <h3>Select Medical (Med-Surg)</h3>
-            <p>Complex acute care management, physical assessments, and medication administration.</p>
+            <h3 style="color: var(--primary);">Select Medical (Med-Surg)</h3>
+            <p>Focus on complex acute care management, physical assessments, and high-safety medication administration for diverse patient populations.</p>
         </div>
         <div class="card">
-            <h3>Evolutions Treatment Center (Behavioral Health)</h3>
-            <p>Crisis intervention, safety monitoring, and therapeutic communication in acute settings.</p>
+            <h3 style="color: var(--primary);">Evolutions Treatment Center (Behavioral Health)</h3>
+            <p>Crisis intervention, safety monitoring, and therapeutic communication in acute psychiatric settings.</p>
         </div>
+        
         <div class="card">
-            <h3>Clinical Skills</h3>
+            <h2><i class="fas fa-check-circle"></i> Core Competencies</h2>
             <div class="skills-grid">
-                <div class="skill-item">EHR Documentation</div>
-                <div class="skill-item">Patient Education</div>
-                <div class="skill-item">Wound Care</div>
+                <div class="skill-item">EHR Documentation (Epic/Cerner)</div>
+                <div class="skill-item">Patient & Family Education</div>
+                <div class="skill-item">Wound Care & Asepsis</div>
                 <div class="skill-item">Vital Sign Interpretation</div>
-                <div class="skill-item">Crisis Intervention</div>
-                <div class="skill-item">Multilingual Communication</div>
+                <div class="skill-item">Crisis De-escalation</div>
+                <div class="skill-item">Bilingual Patient Support</div>
+                <div class="skill-item">SBAR Communication</div>
+                <div class="skill-item">Shared Decision Making</div>
             </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-users"></i> References</h2>
+            <p>Professional and clinical references from Select Medical and Evolutions Treatment Center are <strong>available immediately upon request.</strong></p>
         </div>
     </div>
 
     <!-- CREDENTIAL VAULT -->
     <div id="vault" class="page">
-        <h2><i class="fas fa-shield-alt"></i> Professional Documents</h2>
+        <h2><i class="fas fa-shield-alt"></i> Credential Vault</h2>
         <div class="card">
-            <p style="margin-bottom: 20px;">Click a document to view it instantly or download for your records.</p>
+            <p style="margin-bottom: 20px; font-weight: 500;">Select a credential to view or download.</p>
             
             <a href="Resume-Andy-Diaz-Gomez.pdf" target="_blank" class="doc-link"><i class="fas fa-file-pdf"></i> Professional Resume</a>
-            <a href="Certificate-BLS-Andy-Diaz-Gomez.pdf" target="_blank" class="doc-link"><i class="fas fa-certificate"></i> BLS Provider Card</a>
-            <a href="Certificate-CBCS-Andy-Diaz-Gomez.pdf" target="_blank" class="doc-link"><i class="fas fa-file-medical"></i> Billing & Coding Specialist Cert</a>
-            <a href="Nursing Portfolio, cover letter.pdf" target="_blank" class="doc-link"><i class="fas fa-envelope-open-text"></i> Cover Letter</a>
+            <a href="Certificate-BLS-Andy-Diaz-Gomez.pdf" target="_blank" class="doc-link"><i class="fas fa-certificate"></i> BLS Provider Certification (AHA)</a>
+            <a href="Certificate-CBCS-Andy-Diaz-Gomez.pdf" target="_blank" class="doc-link"><i class="fas fa-file-medical"></i> Billing & Coding Specialist (CBCS)</a>
+            <a href="Nursing Portfolio, cover letter.pdf" target="_blank" class="doc-link"><i class="fas fa-envelope-open-text"></i> Professional Cover Letter</a>
         </div>
         
         <div class="card">
-            <h3>Resume Preview</h3>
+            <h3 style="margin-bottom:15px;">Live Resume Preview</h3>
             <iframe src="Resume-Andy-Diaz-Gomez.pdf" class="pdf-container"></iframe>
+            <div style="margin-top:15px; text-align: center;">
+                <a href="Resume-Andy-Diaz-Gomez.pdf" download style="color: var(--secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">
+                    <i class="fas fa-download"></i> Problem viewing? Click to download.
+                </a>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Andy Diaz Gomez | Registered Nurse Candidate</p>
-        <p>Miami, FL | Respect • Equity • Integrity • Service</p>
+        <p>&copy; 2024 Andy Diaz Gomez | Miami, FL</p>
+        <p style="margin-top:10px;">Nursing Professional Portfolio | Prepared for Residency Review</p>
     </footer>
 
     <script>
         function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            // Deactivate all buttons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            // Show selected page
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
-            // Activate button
             event.currentTarget.classList.add('active');
-            // Scroll to top
             window.scrollTo(0, 0);
         }
     </script>
 
 </body>
 </html>
-
-
