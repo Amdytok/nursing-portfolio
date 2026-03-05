@@ -47,6 +47,40 @@
     .btn-contact:hover { background: var(--primary); transform: scale(1.05); }
 
     footer { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 0.85rem; }
+    @media (max-width: 768px) {
+      /* Make tabs swipeable horizontally */
+      .nav-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        gap: 6px;
+      }
+      .nav-container::-webkit-scrollbar { display: none; }
+
+      .tab-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 10px 14px;
+        font-size: 0.8rem;
+      }
+
+      .page { padding: 22px 12px; }
+      .card { padding: 18px; border-radius: 16px; }
+
+      .hero { padding: 42px 14px; border-radius: 18px; }
+      .profile-img { width: 120px; height: 120px; }
+
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem !important; }
+
+      /* Stack the two hero buttons nicely */
+      .btn-contact { width: 100%; text-align: center; }
+      .btn-contact[style*="margin-left"] { margin-left: 0 !important; }
+
+      /* Better PDF preview sizing on phones */
+      .pdf-container { height: 65vh; }
+    }
   </style>
 </head>
 
@@ -224,18 +258,34 @@
 
   <script>
     function showPage(e, pageId) {
+      // Hide/show pages
       document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
 
       const page = document.getElementById(pageId);
       if (page) page.classList.add('active');
 
-      if (e && e.currentTarget && e.currentTarget.classList) {
-        e.currentTarget.classList.add('active');
+      // Activate clicked tab + auto-scroll into view on mobile
+      const btn = e && e.currentTarget ? e.currentTarget : null;
+      if (btn) {
+        btn.classList.add('active');
+
+        if (window.matchMedia('(max-width: 768px)').matches) {
+          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
       }
 
       window.scrollTo(0, 0);
     }
+
+    // Ensure the initial active tab is visible on mobile load
+    window.addEventListener('DOMContentLoaded', () => {
+      const activeBtn = document.querySelector('.tab-btn.active');
+      if (activeBtn && window.matchMedia('(max-width: 768px)').matches) {
+        activeBtn.scrollIntoView({ behavior: 'auto', inline: 'center', block: 'nearest' });
+      }
+    });
   </script>
 </body>
 </html>
+
