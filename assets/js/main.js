@@ -1,6 +1,5 @@
 async function urlExists(url) {
   try {
-    // Try HEAD first (fast). If server disallows, fall back to GET.
     let res = await fetch(url, { method: 'HEAD', cache: 'no-store' }).catch(() => null);
     if (!res || res.status === 405) {
       res = await fetch(url, { method: 'GET', cache: 'no-store' }).catch(() => null);
@@ -13,6 +12,7 @@ async function urlExists(url) {
 
 async function resolveCandidateLinks() {
   const links = Array.from(document.querySelectorAll('[data-file-candidates]'));
+
   for (const a of links) {
     const candidates = (a.dataset.fileCandidates || '')
       .split('|')
@@ -20,13 +20,20 @@ async function resolveCandidateLinks() {
       .filter(Boolean);
 
     let found = null;
+
     for (const name of candidates) {
       const url = encodeURI(name);
-      if (await urlExists(url)) { found = url; break; }
+      if (await urlExists(url)) {
+        found = url;
+        break;
+      }
     }
 
     if (found) {
       a.setAttribute('href', found);
+      a.classList.remove('disabled');
+      const status = a.querySelector('.status');
+      if (status) status.textContent = 'PDF';
     } else {
       a.classList.add('disabled');
       const status = a.querySelector('.status');
