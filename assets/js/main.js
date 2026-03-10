@@ -1,47 +1,3 @@
-async function urlExists(url) {
-  try {
-    let res = await fetch(url, { method: 'HEAD', cache: 'no-store' }).catch(() => null);
-    if (!res || res.status === 405) {
-      res = await fetch(url, { method: 'GET', cache: 'no-store' }).catch(() => null);
-    }
-    return !!(res && res.ok);
-  } catch (e) {
-    return false;
-  }
-}
-
-async function resolveCandidateLinks() {
-  const links = Array.from(document.querySelectorAll('[data-file-candidates]'));
-
-  for (const a of links) {
-    const candidates = (a.dataset.fileCandidates || '')
-      .split('|')
-      .map(s => s.trim())
-      .filter(Boolean);
-
-    let found = null;
-
-    for (const name of candidates) {
-      const url = encodeURI(name);
-      if (await urlExists(url)) {
-        found = url;
-        break;
-      }
-    }
-
-    if (found) {
-      a.setAttribute('href', found);
-      a.classList.remove('disabled');
-      const status = a.querySelector('.status');
-      if (status) status.textContent = 'PDF';
-    } else {
-      a.classList.add('disabled');
-      const status = a.querySelector('.status');
-      if (status) status.textContent = 'Missing';
-    }
-  }
-}
-
 function showPage(e, pageId) {
   document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -61,9 +17,7 @@ function showPage(e, pageId) {
   window.scrollTo(0, 0);
 }
 
-window.addEventListener('DOMContentLoaded', async () => {
-  await resolveCandidateLinks();
-
+window.addEventListener('DOMContentLoaded', () => {
   const activeBtn = document.querySelector('.tab-btn.active');
   if (activeBtn && window.matchMedia('(max-width: 768px)').matches) {
     activeBtn.scrollIntoView({ behavior: 'auto', inline: 'center', block: 'nearest' });
