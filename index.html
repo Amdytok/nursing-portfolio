@@ -8,85 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <style>
-    :root { --primary: #004a99; --secondary: #00a8e8; --bg: #f0f4f8; --white: #ffffff; --text: #2d3436; --accent: #00d2ff; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-
-    nav { position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 15px rgba(0,0,0,0.08); z-index: 1000; }
-    .nav-container { max-width: 1100px; margin: auto; display: flex; justify-content: center; gap: 5px; padding: 10px; }
-    .tab-btn {
-      padding: 12px 25px; border: none; background: none; font-weight: 600; cursor: pointer; color: #636e72;
-      border-bottom: 3px solid transparent; transition: 0.3s; font-size: 0.85rem; letter-spacing: 0.5px;
-    }
-    .tab-btn.active { color: var(--primary); border-bottom: 3px solid var(--primary); }
-    .tab-btn:hover { color: var(--primary); background: rgba(0,74,153,0.05); border-radius: 8px 8px 0 0; }
-
-    .page { display: none; padding: 40px 20px; max-width: 1000px; margin: auto; animation: slideUp 0.4s ease-out; }
-    .page.active { display: block; }
-    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-    .card { background: var(--white); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); margin-bottom: 30px; border: 1px solid rgba(0,0,0,0.02); }
-    .hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #003366 0%, #004a99 100%); color: white; border-radius: 24px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,74,153,0.2); }
-    .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 6px solid rgba(255,255,255,0.2); object-fit: cover; margin-bottom: 20px; }
-
-    .pdf-container { width: 100%; height: 700px; border: none; border-radius: 12px; background: #eee; }
-    .doc-link { display: flex; align-items: center; gap: 12px; padding: 18px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; color: var(--primary); font-weight: 600; margin-bottom: 12px; transition: 0.2s; }
-    .doc-link:hover { transform: translateX(5px); border-color: var(--secondary); background: #f0f9ff; }
-
-    /* If a file is missing, we disable the button so nothing "breaks" */
-    .doc-link.disabled { opacity: 0.55; pointer-events: none; cursor: not-allowed; }
-    .doc-link .status { margin-left: auto; font-size: 0.8rem; font-weight: 700; color: #64748b; }
-
-    h2 { color: var(--primary); margin-bottom: 25px; font-weight: 700; font-size: 1.8rem; display: flex; align-items: center; gap: 12px; }
-    h3 { color: var(--text); margin-bottom: 10px; font-size: 1.2rem; }
-
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
-    .skill-item { background: #f1f5f9; padding: 12px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; color: #475569; border-left: 4px solid var(--secondary); }
-
-    .philosophy-text p { margin-bottom: 20px; font-size: 1.05rem; color: #444; line-height: 1.8; text-align: justify; }
-    .highlight { color: var(--primary); font-weight: 600; }
-
-    .btn-contact { background: var(--secondary); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px; transition: 0.3s; }
-    .btn-contact:hover { background: var(--primary); transform: scale(1.05); }
-
-    footer { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 0.85rem; }
-
-    @media (max-width: 768px) {
-      .nav-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        justify-content: flex-start;
-        padding: 10px 12px;
-        gap: 6px;
-      }
-      .nav-container::-webkit-scrollbar { display: none; }
-
-      .tab-btn {
-        flex: 0 0 auto;
-        white-space: nowrap;
-        padding: 10px 14px;
-        font-size: 0.8rem;
-      }
-
-      .page { padding: 22px 12px; }
-      .card { padding: 18px; border-radius: 16px; }
-
-      .hero { padding: 42px 14px; border-radius: 18px; }
-      .profile-img { width: 120px; height: 120px; }
-
-      .hero h1 { font-size: 1.8rem; }
-      .hero p { font-size: 1rem !important; }
-
-      .btn-contact { width: 100%; text-align: center; }
-      .btn-contact[style*="margin-left"] { margin-left: 0 !important; }
-
-      .pdf-container { height: 65vh; }
-    }
-  </style>
 </head>
-
 <body>
   <nav>
     <div class="nav-container">
@@ -103,7 +25,7 @@
   <!-- HOME PAGE -->
   <div id="home" class="page active">
     <div class="hero">
-      <img src="profile.jpg" alt="Andy Diaz Gomez" class="profile-img" onerror="this.src='profile.jpg'">
+      <img src="assets/images/profile.jpg" alt="Andy Diaz Gomez" class="profile-img" onerror="this.src='assets/images/profile.jpg'">
       <h1>Andy Diaz Gomez</h1>
       <p style="font-size: 1.2rem; font-weight: 300; letter-spacing: 1px; margin-top: 10px;">New Graduate RN Candidate | Miami, FL</p>
       <div style="margin-top:25px;">
@@ -111,7 +33,6 @@
       </div>
 
       <a href="mailto:workand999@gmail.com" class="btn-contact"><i class="fas fa-paper-plane"></i> Contact for Interview</a>
-
       <a href="https://www.linkedin.com/in/andy-diaz-gomez-4375a0291" target="_blank" rel="noopener noreferrer" class="btn-contact" style="background:#0077B5; margin-left:10px;">
         <i class="fab fa-linkedin"></i> LinkedIn
       </a>
@@ -143,8 +64,7 @@
         <p>My core beliefs are <span class="highlight">respect, equity, integrity, and service</span>. Respect is about being attentive and tailoring care to a patient's culture and language. Equity involves recognizing barriers—such as cost, stigma, or low health literacy—and finding sustainable solutions. Integrity is about recognizing boundaries and being truthful. I want to be the nurse who detects changes early, communicates effectively, and doesn't hesitate to raise the alarm when necessary.</p>
       </div>
 
-      <!-- This one appears to exist already, so it's a direct link -->
-      <a href="Personal_Philosophy_of_Nursing_APA7.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+      <a href="assets/pdfs/Personal_Philosophy_of_Nursing_APA7.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
         <i class="fas fa-file-pdf"></i> View Original APA Research Paper
       </a>
     </div>
@@ -186,23 +106,22 @@
     <div class="card">
       <p style="margin-bottom: 20px; font-weight: 500;">Select a credential to view or download.</p>
 
-      <a href="Resume-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+      <a href="assets/pdfs/Resume-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
         <i class="fas fa-file-pdf"></i> Professional Resume
       </a>
 
-      <a href="Certificate-BLS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link" data-file-candidates="Certificate-BLS-Andy-Diaz-Gomez.pdf|Certificate-BLS-Andy-Diaz-Go.pdf">
+      <a href="assets/pdfs/Certificate-BLS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link" data-file-candidates="assets/pdfs/Certificate-BLS-Andy-Diaz-Gomez.pdf|assets/pdfs/Certificate-BLS-Andy-Diaz-Go.pdf">
         <i class="fas fa-certificate"></i> BLS Provider Certification (AHA)
         <span class="status">PDF</span>
       </a>
 
-      <a href="Certificate-CBCS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link" data-file-candidates="Certificate-CBCS-Andy-Diaz-Gomez.pdf|Certificate-CBCS-Andy-Diaz-G.pdf">
+      <a href="assets/pdfs/Certificate-CBCS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link" data-file-candidates="assets/pdfs/Certificate-CBCS-Andy-Diaz-Gomez.pdf|assets/pdfs/Certificate-CBCS-Andy-Diaz-G.pdf">
         <i class="fas fa-file-medical"></i> Billing &amp; Coding Specialist (CBCS)
         <span class="status">PDF</span>
       </a>
 
-      <!-- Cover letter filename appears to include spaces; candidates handle both cases -->
-      <a href="Nursing_Portfolio_cover_letter.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"
-         data-file-candidates="Nursing portfolio cover letter.pdf|Nursing Portfolio, cover letter.pdf|Nursing_Portfolio_cover_letter.pdf|Nursing_portfolio_cover_letter.pdf">
+      <a href="assets/pdfs/Nursing_portfolio_cover_letter.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"
+         data-file-candidates="assets/pdfs/Nursing portfolio cover letter.pdf|assets/pdfs/Nursing Portfolio, cover letter.pdf|assets/pdfs/Nursing_Portfolio_cover_letter.pdf|assets/pdfs/Nursing_portfolio_cover_letter.pdf">
         <i class="fas fa-envelope-open-text"></i> Professional Cover Letter
         <span class="status">PDF</span>
       </a>
@@ -210,9 +129,9 @@
 
     <div class="card">
       <h3 style="margin-bottom:15px;">Live Resume Preview</h3>
-      <iframe src="Resume-Andy-Diaz-Gomez.pdf" class="pdf-container"></iframe>
+      <iframe src="assets/pdfs/Resume-Andy-Diaz-Gomez.pdf" class="pdf-container"></iframe>
       <div style="margin-top:15px; text-align: center;">
-        <a href="Resume-Andy-Diaz-Gomez.pdf" download style="color: var(--secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">
+        <a href="assets/pdfs/Resume-Andy-Diaz-Gomez.pdf" download style="color: var(--secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">
           <i class="fas fa-download"></i> Problem viewing? Click to download.
         </a>
       </div>
@@ -225,16 +144,15 @@
 
     <div class="card">
       <h3>Nursing Skills Checklist</h3>
-      <a href="Nursing_Skills_Checklist.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+      <a href="assets/pdfs/Nursing_Skills_Checklist.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
         <i class="fas fa-file-pdf"></i> Nursing Skills Checklist
       </a>
     </div>
 
     <div class="card">
       <h3>Laboratory Competency Evaluation</h3>
-      <!-- Your repo shows a single combined lab competency file; candidates cover common endings -->
-      <a href="Laboratory_Competency_Evaluation.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"
-         data-file-candidates="Laboratory_Competency_Evaluation.pdf|Laboratory_Competency_Evaluations.pdf|Laboratory_Competency_Eval.pdf">
+      <a href="assets/pdfs/Laboratory_Competency_Evaluation.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"
+         data-file-candidates="assets/pdfs/Laboratory_Competency_Evaluation.pdf|assets/pdfs/Laboratory_Competency_Evaluations.pdf|assets/pdfs/Laboratory_Competency_Eval.pdf">
         <i class="fas fa-file-pdf"></i> View Lab Competency Evaluation (Combined)
         <span class="status">PDF</span>
       </a>
@@ -245,7 +163,7 @@
 
     <div class="card">
       <h3>Service-Learning Reflection</h3>
-      <a href="Service_Learning_Rotation.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+      <a href="assets/pdfs/Service_Learning_Rotation.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
         <i class="fas fa-file-pdf"></i> Service-Learning Rotation / Reflection
       </a>
     </div>
@@ -268,8 +186,8 @@
 
     <div class="card">
       <h3>Letter of Reference</h3>
-      <a href="Letter_of_Reference_Andy_Diaz_Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"
-         data-file-candidates="Letter_of_Reference_Andy_Diaz_Gomez.pdf|Letter_of_Reference_Andy_Diaz.pdf">
+      <a href="assets/pdfs/Letter_of_Reference_Andy_Diaz_Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link"
+         data-file-candidates="assets/pdfs/Letter_of_Reference_Andy_Diaz_Gomez.pdf|assets/pdfs/Letter_of_Reference_Andy_Diaz.pdf">
         <i class="fas fa-file-pdf"></i> Letter of Reference
         <span class="status">PDF</span>
       </a>
@@ -281,73 +199,6 @@
     <p style="margin-top:10px;">Nursing Professional Portfolio | Prepared for Residency Review</p>
   </footer>
 
-  <script>
-    async function urlExists(url) {
-      try {
-        // Try HEAD first (fast). If server disallows, fall back to GET.
-        let res = await fetch(url, { method: 'HEAD', cache: 'no-store' }).catch(() => null);
-        if (!res || res.status === 405) {
-          res = await fetch(url, { method: 'GET', cache: 'no-store' }).catch(() => null);
-        }
-        return !!(res && res.ok);
-      } catch {
-        return false;
-      }
-    }
-
-    async function resolveCandidateLinks() {
-      const links = Array.from(document.querySelectorAll('a[data-file-candidates]'));
-      for (const a of links) {
-        const candidates = (a.dataset.fileCandidates || '')
-          .split('|')
-          .map(s => s.trim())
-          .filter(Boolean);
-
-        let found = null;
-        for (const name of candidates) {
-          const url = encodeURI(name);
-          if (await urlExists(url)) { found = url; break; }
-        }
-
-        if (found) {
-          a.setAttribute('href', found);
-        } else {
-          a.classList.add('disabled');
-          const status = a.querySelector('.status');
-          if (status) status.textContent = 'Missing';
-        }
-      }
-    }
-
-    function showPage(e, pageId) {
-      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-
-      const page = document.getElementById(pageId);
-      if (page) page.classList.add('active');
-
-      const btn = e && e.currentTarget ? e.currentTarget : null;
-      if (btn) {
-        btn.classList.add('active');
-
-        if (window.matchMedia('(max-width: 768px)').matches) {
-          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
-      }
-
-      window.scrollTo(0, 0);
-    }
-
-    window.addEventListener('DOMContentLoaded', async () => {
-      await resolveCandidateLinks();
-
-      const activeBtn = document.querySelector('.tab-btn.active');
-      if (activeBtn && window.matchMedia('(max-width: 768px)').matches) {
-        activeBtn.scrollIntoView({ behavior: 'auto', inline: 'center', block: 'nearest' });
-      }
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
