@@ -108,7 +108,7 @@
       </div>
 
       <!-- UPDATED EMAIL HERE -->
-      <a href="mailto:andydiaztok@gmail.com" class="btn-contact"><i class="fas fa-paper-plane"></i> Contact for Interview</a>
+      <a href="mailto:workand999@gmail.com" class="btn-contact"><i class="fas fa-paper-plane"></i> Contact for Interview</a>
 
       <a href="https://www.linkedin.com/in/andy-diaz-gomez-4375a0291" target="_blank" rel="noopener noreferrer" class="btn-contact" style="background:#0077B5; margin-left:10px;">
         <i class="fab fa-linkedin"></i> LinkedIn
@@ -273,4 +273,10 @@
     // Ensure the initial active tab is visible on mobile load
     window.addEventListener('DOMContentLoaded', () => {
       const activeBtn = document.querySelector('.tab-btn.active');
-      if (activeBtn && window.matchMedia('(max-width: 768px)').match
+      if (activeBtn && window.matchMedia('(max-width: 768px)').matches) {
+        activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    });
+  </script>
+</body>
+</html>
