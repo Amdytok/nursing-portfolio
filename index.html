@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional nursing portfolio for Andy Diaz Gomez, RN candidate in Miami, FL, featuring clinical experience, competencies, and credentials." />
   <title>Andy Diaz Gomez | RN Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -10,198 +11,198 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <button class="tab-btn active" onclick="showPage(event, 'home')">HOME</button>
-      <button class="tab-btn" onclick="showPage(event, 'about')">PHILOSOPHY</button>
-      <button class="tab-btn" onclick="showPage(event, 'experience')">CLINICAL</button>
-      <button class="tab-btn" onclick="showPage(event, 'vault')">CREDENTIALS</button>
-      <button class="tab-btn" onclick="showPage(event, 'competencies')">COMPETENCIES</button>
-      <button class="tab-btn" onclick="showPage(event, 'development')">DEVELOPMENT</button>
-      <button class="tab-btn" onclick="showPage(event, 'references')">REFERENCES</button>
+  <nav aria-label="Portfolio Sections">
+    <div class="nav-container" role="tablist" aria-label="Portfolio Tabs">
+      <button type="button" class="tab-btn active" onclick="showPage(event, 'home')" role="tab" aria-selected="true" aria-controls="home">HOME</button>
+      <button type="button" class="tab-btn" onclick="showPage(event, 'about')" role="tab" aria-selected="false" aria-controls="about">PHILOSOPHY</button>
+      <button type="button" class="tab-btn" onclick="showPage(event, 'experience')" role="tab" aria-selected="false" aria-controls="experience">CLINICAL</button>
+      <button type="button" class="tab-btn" onclick="showPage(event, 'vault')" role="tab" aria-selected="false" aria-controls="vault">CREDENTIALS</button>
+      <button type="button" class="tab-btn" onclick="showPage(event, 'competencies')" role="tab" aria-selected="false" aria-controls="competencies">COMPETENCIES</button>
+      <button type="button" class="tab-btn" onclick="showPage(event, 'development')" role="tab" aria-selected="false" aria-controls="development">DEVELOPMENT</button>
+      <button type="button" class="tab-btn" onclick="showPage(event, 'references')" role="tab" aria-selected="false" aria-controls="references">REFERENCES</button>
     </div>
   </nav>
 
-  <!-- HOME PAGE -->
-  <div id="home" class="page active">
-    <div class="hero">
-      <img src="assets/images/profile.jpg" alt="Andy Diaz Gomez" class="profile-img" onerror="this.src='assets/images/profile.jpg'">
-      <h1>Andy Diaz Gomez</h1>
-      <p style="font-size: 1.2rem; font-weight: 300; letter-spacing: 1px; margin-top: 10px;">New Graduate RN Candidate | Miami, FL</p>
-      <div style="margin-top:25px;">
-        <span style="background:rgba(255,255,255,0.15); padding:8px 20px; border-radius:50px; font-size:0.8rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.3);">BILINGUAL (ENGLISH/SPANISH)</span>
+  <main>
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+      <div class="hero">
+        <img src="assets/images/profile.jpg" alt="Andy Diaz Gomez" class="profile-img" onerror="this.src='assets/images/profile.jpg'">
+        <h1>Andy Diaz Gomez</h1>
+        <p style="font-size: 1.2rem; font-weight: 300; letter-spacing: 1px; margin-top: 10px;">New Graduate RN Candidate | Miami, FL</p>
+        <div style="margin-top:25px;">
+          <span style="background:rgba(255,255,255,0.15); padding:8px 20px; border-radius:50px; font-size:0.8rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.3);">BILINGUAL (ENGLISH/SPANISH)</span>
+        </div>
+
+        <a href="mailto:workand999@gmail.com" class="btn-contact"><i class="fas fa-paper-plane"></i> Contact for Interview</a>
+        <a href="https://www.linkedin.com/in/andy-diaz-gomez-4375a0291" target="_blank" rel="noopener noreferrer" class="btn-contact" style="background:#0077B5; margin-left:10px;">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
       </div>
 
-      <a href="mailto:workand999@gmail.com" class="btn-contact"><i class="fas fa-paper-plane"></i> Contact for Interview</a>
-      <a href="https://www.linkedin.com/in/andy-diaz-gomez-4375a0291" target="_blank" rel="noopener noreferrer" class="btn-contact" style="background:#0077B5; margin-left:10px;">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-    </div>
-
-    <div class="card">
-      <h2><i class="fas fa-user-nurse"></i> Professional Mission</h2>
-      <p>Dedicated Registered Nurse candidate focused on <strong>early intervention</strong> and <strong>continuity of care</strong>. By combining clinical vigilance with compassionate, bilingual patient education, I aim to prevent emergencies and support health equity in high-acuity environments.</p>
-    </div>
-
-    <div class="card">
-      <h2><i class="fas fa-user-nurse"></i> Self Introduction</h2>
-      <p>Hello, I am Andy Diaz Gomez, a new RN graduate living in Miami; I plan to take my NCLEX between May and June 2026. I am looking for a position as a Registered Nurse. I have a great passion for working in the medical, surgical, emergency and ICU departments where collaboration, effective communication and a composed clinical approach are crucial.</p>
-      <p>One reason I chose nursing is the close and frequent contact with patients; nurses are often the first to notice subtle changes in a patient's condition. This connection enables early intervention, prompt communication and helps prevent emergencies.</p>
-      <p>My strengths include empathy, the ability to stay calm under pressure and clear communication. I excel at patient education—simplifying information so that patients understand their care plans, which promotes shared decision-making and self-management.</p>
-      <p>My clinical experiences include Behavioral Health at Evolutions Treatment Center and Medical-Surgical at Select Medical, where I practiced building trust, using therapeutic communication and providing safe, organized care. Respect, equity, integrity and service are my guiding principles, and I infuse these values into patient interactions and teamwork.</p>
-    </div>
-  </div>
-
-  <!-- PHILOSOPHY PAGE -->
-  <div id="about" class="page">
-    <div class="card">
-      <h2><i class="fas fa-book-medical"></i> Nursing Philosophy</h2>
-      <div class="philosophy-text">
-        <p>Nursing, in my opinion, is professional care that uses <span class="highlight">evidence, clinical judgment, and compassion</span> to uphold human dignity and assist people in healing, adapting, or living well with their illness. Being a bilingual student of nursing, I have witnessed that the results are significantly better when patients understand the plan and feel comfortable asking questions.</p>
-        <p>Nurses often know patients best because they spend sustained time with them during daily shifts. Much of nursing involves <span class="highlight">continuous observation, analysis, and timely intervention</span> when a patient’s condition changes.</p>
-      </div>
-      <div>
-        <p>My core beliefs are <span class="highlight">respect, equity, integrity, and service</span>. Respect is about being attentive and tailoring care to a patient's culture and language. Equity involves recognizing barriers—such as cost, stigma, or low health literacy—and finding sustainable solutions. Integrity is about recognizing boundaries and being truthful. I want to be the nurse who detects changes early, communicates effectively, and doesn't hesitate to raise the alarm when necessary.</p>
+      <div class="card">
+        <h2><i class="fas fa-user-nurse"></i> Professional Mission</h2>
+        <p>Dedicated Registered Nurse candidate focused on <strong>early intervention</strong> and <strong>continuity of care</strong>. By combining clinical vigilance with compassionate, bilingual patient education, I aim to prevent emergencies and support health equity in high-acuity environments.</p>
       </div>
 
-      <a href="assets/pdfs/Personal_Philosophy_of_Nursing_APA7.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
-        <i class="fas fa-file-pdf"></i> View Original APA Research Paper
-        <span class="status">PDF</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- CLINICAL PAGE -->
-  <div id="experience" class="page">
-    <h2><i class="fas fa-stethoscope"></i> Clinical Background</h2>
-
-    <div class="card">
-      <h3 style="color: var(--primary);">Select Medical (Med-Surg)</h3>
-      <p>Focus on complex acute care management, physical assessments, and high-safety medication administration for diverse patient populations.</p>
-    </div>
-
-    <div class="card">
-      <h3 style="color: var(--primary);">Evolutions Treatment Center (Behavioral Health)</h3>
-      <p>Crisis intervention, safety monitoring, and therapeutic communication in acute psychiatric settings.</p>
-    </div>
-
-    <div class="card">
-      <h2><i class="fas fa-check-circle"></i> Core Competencies</h2>
-      <div class="skills-grid">
-        <div class="skill-item">EHR Documentation (Epic/Cerner)</div>
-        <div class="skill-item">Patient &amp; Family Education</div>
-        <div class="skill-item">Wound Care &amp; Asepsis</div>
-        <div class="skill-item">Vital Sign Interpretation</div>
-        <div class="skill-item">Crisis De-escalation</div>
-        <div class="skill-item">Bilingual Patient Support</div>
-        <div class="skill-item">SBAR Communication</div>
-        <div class="skill-item">Shared Decision Making</div>
+      <div class="card">
+        <h2><i class="fas fa-user-nurse"></i> Professional Introduction</h2>
+        <p>Hello, I am Andy Diaz Gomez, a new RN graduate in Miami. I plan to take my NCLEX between May and June 2026 and am actively seeking an RN position. I am especially motivated to work in medical-surgical, emergency, and ICU settings where collaboration, effective communication, and composed clinical judgment are essential.</p>
+        <p>One reason I chose nursing is the close and frequent contact nurses have with patients. Nurses are often the first to notice subtle changes in condition. This connection supports early intervention, timely communication, and helps prevent emergencies.</p>
+        <p>My strengths include empathy, composure under pressure, and clear communication. I excel at patient education by simplifying complex information so patients understand their care plans, which promotes shared decision-making and self-management.</p>
+        <p>My clinical experience includes Behavioral Health at Evolutions Treatment Center and Medical-Surgical care at Select Medical, where I practiced therapeutic communication, trust-building, and safe, organized care. Respect, equity, integrity, and service are my guiding values in patient interactions and teamwork.</p>
       </div>
     </div>
-  </div>
 
-  <!-- CREDENTIAL VAULT -->
-  <div id="vault" class="page">
-    <h2><i class="fas fa-shield-alt"></i> Credential Vault</h2>
+    <!-- PHILOSOPHY PAGE -->
+    <div id="about" class="page">
+      <div class="card">
+        <h2><i class="fas fa-book-medical"></i> Nursing Philosophy</h2>
+        <div class="philosophy-text">
+          <p>Nursing, in my opinion, is professional care that uses <span class="highlight">evidence, clinical judgment, and compassion</span> to uphold human dignity and assist people in healing, adapting, or living well with their illness. Being a bilingual student of nursing, I have witnessed that outcomes improve significantly when patients understand the plan and feel comfortable asking questions.</p>
+          <p>Nurses often know patients best because they spend sustained time with them during daily shifts. Much of nursing involves <span class="highlight">continuous observation, analysis, and timely intervention</span> when a patient’s condition changes.</p>
+        </div>
+        <div>
+          <p>My core beliefs are <span class="highlight">respect, equity, integrity, and service</span>. Respect is about being attentive and tailoring care to a patient's culture and language. Equity involves recognizing barriers—such as cost, stigma, or low health literacy—and finding sustainable solutions. Integrity is about recognizing boundaries and being truthful. I strive to be the nurse who detects changes early, communicates effectively, and raises concerns promptly when needed.</p>
+        </div>
 
-    <div class="card">
-      <p style="margin-bottom: 20px; font-weight: 500;">Select a credential to view or download.</p>
-
-      <a href="assets/pdfs/Resume-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
-        <i class="fas fa-file-pdf"></i> Professional Resume
-        <span class="status">PDF</span>
-      </a>
-
-      <a href="assets/pdfs/Certificate-BLS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
-        <i class="fas fa-certificate"></i> BLS Provider Certification (AHA)
-        <span class="status">PDF</span>
-      </a>
-
-      <a href="assets/pdfs/Certificate-CBCS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
-        <i class="fas fa-file-medical"></i> Billing &amp; Coding Specialist (CBCS)
-        <span class="status">PDF</span>
-      </a>
-
-      <a href="assets/pdfs/Nursing_portfolio_cover_letter.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
-        <i class="fas fa-envelope-open-text"></i> Professional Cover Letter
-        <span class="status">PDF</span>
-      </a>
-    </div>
-
-    <div class="card">
-      <h3 style="margin-bottom:15px;">Live Resume Preview</h3>
-      <iframe src="assets/pdfs/Resume-Andy-Diaz-Gomez.pdf" class="pdf-container"></iframe>
-      <div style="margin-top:15px; text-align: center;">
-        <a href="assets/pdfs/Resume-Andy-Diaz-Gomez.pdf" download style="color: var(--secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">
-          <i class="fas fa-download"></i> Problem viewing? Click to download.
+        <a href="assets/pdfs/Personal_Philosophy_of_Nursing_APA7.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+          <i class="fas fa-file-pdf"></i> View Original APA Research Paper
+          <span class="status">PDF</span>
         </a>
       </div>
     </div>
-  </div>
 
-  <!-- COMPETENCIES PAGE -->
-  <div id="competencies" class="page">
-    <h2><i class="fas fa-clipboard-list"></i> Competencies</h2>
+    <!-- CLINICAL PAGE -->
+    <div id="experience" class="page">
+      <h2><i class="fas fa-stethoscope"></i> Clinical Background</h2>
 
-    <div class="card">
-      <h3>Nursing Skills Checklist</h3>
-      <a href="assets/pdfs/Nursing_Skills_Checklist.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
-        <i class="fas fa-file-pdf"></i> Nursing Skills Checklist
-        <span class="status">PDF</span>
-      </a>
+      <div class="card">
+        <h3 style="color: var(--primary);">Select Medical (Med-Surg)</h3>
+        <p>Focus on complex acute care management, physical assessments, and high-safety medication administration for diverse patient populations.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="color: var(--primary);">Evolutions Treatment Center (Behavioral Health)</h3>
+        <p>Crisis intervention, safety monitoring, and therapeutic communication in acute psychiatric settings.</p>
+      </div>
+
+      <div class="card">
+        <h2><i class="fas fa-check-circle"></i> Core Competencies</h2>
+        <div class="skills-grid">
+          <div class="skill-item">EHR Documentation (Epic/Cerner)</div>
+          <div class="skill-item">Patient &amp; Family Education</div>
+          <div class="skill-item">Wound Care &amp; Asepsis</div>
+          <div class="skill-item">Vital Sign Interpretation</div>
+          <div class="skill-item">Crisis De-escalation</div>
+          <div class="skill-item">Bilingual Patient Support</div>
+          <div class="skill-item">SBAR Communication</div>
+          <div class="skill-item">Shared Decision Making</div>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Laboratory Competency Evaluation</h3>
-      <a href="assets/pdfs/Laboratory_Competency_Evaluations.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
-        <i class="fas fa-file-pdf"></i> View Lab Competency Evaluation (Combined)
-        <span class="status">PDF</span>
-      </a>
-      <p style="margin-top:10px; color:#475569;">
-        Includes: Health Assessment, Pediatrics, Maternal-Newborn, and Pharmacology.
-      </p>
+    <!-- CREDENTIAL VAULT -->
+    <div id="vault" class="page">
+      <h2><i class="fas fa-shield-alt"></i> Credential Vault</h2>
+
+      <div class="card">
+        <p style="margin-bottom: 20px; font-weight: 500;">Select a credential to view or download.</p>
+
+        <a href="assets/pdfs/Resume-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+          <i class="fas fa-file-pdf"></i> Professional Resume
+          <span class="status">PDF</span>
+        </a>
+
+        <a href="assets/pdfs/Certificate-BLS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+          <i class="fas fa-certificate"></i> BLS Provider Certification (AHA)
+          <span class="status">PDF</span>
+        </a>
+
+        <a href="assets/pdfs/Certificate-CBCS-Andy-Diaz-Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+          <i class="fas fa-file-medical"></i> Billing &amp; Coding Specialist (CBCS)
+          <span class="status">PDF</span>
+        </a>
+
+        <a href="assets/pdfs/Nursing_portfolio_cover_letter.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+          <i class="fas fa-envelope-open-text"></i> Professional Cover Letter
+          <span class="status">PDF</span>
+        </a>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:15px;">Live Resume Preview</h3>
+        <iframe src="assets/pdfs/Resume-Andy-Diaz-Gomez.pdf" class="pdf-container" title="Resume preview"></iframe>
+        <div style="margin-top:15px; text-align: center;">
+          <a href="assets/pdfs/Resume-Andy-Diaz-Gomez.pdf" download style="color: var(--secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">
+            <i class="fas fa-download"></i> Problem viewing? Click to download.
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Service-Learning Reflection</h3>
-      <a href="assets/pdfs/Service_Learning_Rotation.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
-        <i class="fas fa-file-pdf"></i> Service-Learning Rotation / Reflection
-        <span class="status">PDF</span>
-      </a>
+    <!-- COMPETENCIES PAGE -->
+    <div id="competencies" class="page">
+      <h2><i class="fas fa-clipboard-list"></i> Competencies</h2>
+
+      <div class="card">
+        <h3>Nursing Skills Checklist</h3>
+        <a href="assets/pdfs/Nursing_Skills_Checklist.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+          <i class="fas fa-file-pdf"></i> Nursing Skills Checklist
+          <span class="status">PDF</span>
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>Laboratory Competency Evaluation</h3>
+        <a href="assets/pdfs/Laboratory_Competency_Evaluations.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+          <i class="fas fa-file-pdf"></i> View Lab Competency Evaluation (Combined)
+          <span class="status">PDF</span>
+        </a>
+        <p style="margin-top:10px; color:#475569;">
+          Includes: Health Assessment, Pediatrics, Maternal-Newborn, and Pharmacology.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Service-Learning Reflection</h3>
+        <a href="assets/pdfs/Service_Learning_Rotation.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+          <i class="fas fa-file-pdf"></i> Service-Learning Rotation / Reflection
+          <span class="status">PDF</span>
+        </a>
+      </div>
     </div>
-  </div>
 
-  <!-- DEVELOPMENT PAGE -->
-  <div id="development" class="page">
-    <h2><i class="fas fa-chart-line"></i> Professional Development</h2>
+    <!-- DEVELOPMENT PAGE -->
+    <div id="development" class="page">
+      <h2><i class="fas fa-chart-line"></i> Professional Development</h2>
 
-    <div class="card">
-      <h3>Continuing Education &amp; Career Goals</h3>
-      <p>I plan to keep building my knowledge and skills after graduation by continuing my education. My goal is to complete my bachelor’s degree and then pursue a master’s degree so I can become a Nurse Practitioner.</p>
-      <p>I’m still exploring which specialty will be the best fit for me, but I’m committed to lifelong learning, staying current with evidence-based practice, and growing into a role where I can provide high-level, patient-centered care.</p>
+      <div class="card">
+        <h3>Continuing Education &amp; Career Goals</h3>
+        <p>I plan to keep building my knowledge and skills after graduation through continuing education. My goal is to complete my bachelor’s degree and then pursue a master’s degree to become a Nurse Practitioner.</p>
+        <p>I’m still exploring which specialty is the best fit for me, and I am committed to lifelong learning, staying current with evidence-based practice, and growing into a role where I can provide high-level, patient-centered care.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- REFERENCES PAGE -->
-  <div id="references" class="page">
-    <h2><i class="fas fa-user-friends"></i> References</h2>
+    <!-- REFERENCES PAGE -->
+    <div id="references" class="page">
+      <h2><i class="fas fa-user-friends"></i> References</h2>
 
-    <div class="card">
-      <h3>Letter of Reference</h3>
-      <a href="assets/pdfs/Letter_of_Reference_Andy_Diaz_Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
-        <i class="fas fa-file-pdf"></i> Letter of Reference
-        <span class="status">PDF</span>
-      </a>
+      <div class="card">
+        <h3>Letter of Reference</h3>
+        <a href="assets/pdfs/Letter_of_Reference_Andy_Diaz_Gomez.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+          <i class="fas fa-file-pdf"></i> Letter of Reference
+          <span class="status">PDF</span>
+        </a>
+      </div>
     </div>
-  </div>
+  </main>
 
   <footer>
-    <p>&copy; 2024 Andy Diaz Gomez | Miami, FL</p>
+    <p>&copy; <span id="current-year">2024</span> Andy Diaz Gomez | Miami, FL</p>
     <p style="margin-top:10px;">Nursing Professional Portfolio | Prepared for Residency Review</p>
   </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
